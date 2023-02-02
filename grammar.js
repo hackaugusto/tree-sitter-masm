@@ -6,7 +6,7 @@ module.exports = grammar({
     source_file: $ => seq(repeat($.use), repeat(choice($.proc, $.export)), optional($.main)),
 
     comment: $ => token(seq('#', /.*/)),
-    use: $ => seq('use', $._path),
+    use: $ => seq('use', field('module', $._path)),
     export: $ => seq($._export, repeat($._block), $._end),
     proc: $ => seq($._proc, repeat($._block), $._end),
     main: $ => seq($._begin, repeat($._block), $._end),
@@ -91,8 +91,8 @@ module.exports = grammar({
     _push: $ => seq('push', repeat1(seq('.', choice($.felt, $.felt_hex)))), 
 
     // structural "headers"
-    _proc: $ => seq('proc', '.', $._proc_name, optional(seq('.', $.u16))),
-    _export: $ => seq('export', '.', $._proc_name, optional(seq('.', $.u16))),
+    _proc: $ => seq('proc', '.', field('name', $._proc_name), optional(seq('.', $.u16))),
+    _export: $ => seq('export', '.', field('name', $._proc_name), optional(seq('.', $.u16))),
     _if: $ => seq('if', '.', 'true'),
     _else: $ => 'else',
     _while: $ => seq('while', '.', 'true'),

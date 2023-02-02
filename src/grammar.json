@@ -65,8 +65,12 @@
           "value": "use"
         },
         {
-          "type": "SYMBOL",
-          "name": "_path"
+          "type": "FIELD",
+          "name": "module",
+          "content": {
+            "type": "SYMBOL",
+            "name": "_path"
+          }
         }
       ]
     },
@@ -1801,8 +1805,12 @@
           "value": "."
         },
         {
-          "type": "SYMBOL",
-          "name": "_proc_name"
+          "type": "FIELD",
+          "name": "name",
+          "content": {
+            "type": "SYMBOL",
+            "name": "_proc_name"
+          }
         },
         {
           "type": "CHOICE",
@@ -1839,8 +1847,12 @@
           "value": "."
         },
         {
-          "type": "SYMBOL",
-          "name": "_proc_name"
+          "type": "FIELD",
+          "name": "name",
+          "content": {
+            "type": "SYMBOL",
+            "name": "_proc_name"
+          }
         },
         {
           "type": "CHOICE",

@@ -350,7 +350,18 @@
   {
     "type": "use",
     "named": true,
-    "fields": {}
+    "fields": {
+      "module": {
+        "multiple": true,
+        "required": true,
+        "types": [
+          {
+            "type": "::",
+            "named": false
+          }
+        ]
+      }
+    }
   },
   {
     "type": "while",
