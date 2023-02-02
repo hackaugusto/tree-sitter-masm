@@ -1,0 +1,22 @@
+====
+MAIN
+====
+
+begin
+  push.1
+  add add
+  push.10
+  assert_eq
+end
+
+---
+
+    (source_file
+      (main
+        (opcode
+          (felt))
+        (opcode)
+        (opcode)
+        (opcode
+          (felt))
+        (opcode)))

@@ -1,0 +1,20 @@
+=======
+NO MAIN
+=======
+
+export.five
+  push.1.2.2
+  add add
+end
+
+---
+
+    (source_file
+      (export
+        (opcode
+          (felt)
+          (felt)
+          (felt))
+        (opcode)
+        (opcode)))
+

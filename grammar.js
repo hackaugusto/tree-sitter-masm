@@ -49,14 +49,14 @@ module.exports = grammar({
 
     // advice instructions
     _adv_inst: $ => seq('adv', '.', choice('u64div', 'keyval', 'ext2inv', 'ext2intt')),
-    _adv_mem: $ => seq('adv', '.', 'mem', '.', $._u32, '.', $._u32),
+    _adv_mem: $ => seq('adv', '.', 'mem', '.', $.u32, '.', $.u32),
 
     // special cases
-    _exp: $ => seq('exp', optional(seq('.', 'u', $._u8,))),
+    _exp: $ => seq('exp', optional(seq('.', 'u', $.u8,))),
     _assert: $ => seq('u32assert', '.', choice('1', '2')),
 
     // field element instructions
-    _felt_inst: $ => seq(choice('add', 'sub', 'mul', 'eq', 'neq'), optional(seq('.', $._felt))),
+    _felt_inst: $ => seq(choice('add', 'sub', 'mul', 'eq', 'neq'), optional(seq('.', $.felt))),
 
     // u32 instructions
     _u32_inst: $ => seq(choice(
@@ -69,12 +69,12 @@ module.exports = grammar({
       'u32unchecked_shl', 'u32checked_rotr', 'u32unchecked_rotr' ,
       'u32checked_rotl', 'u32unchecked_rotl', 'u32checked_eq' ,
       'u32checked_neq', 'mem_load', 'mem_loadw', 'mem_store', 'mem_storew'
-    ), optional(seq('.', $._u32))),
+    ), optional(seq('.', $.u32))),
 
     // u16 instructions
     _u16_inst: $ => seq(choice(
         'locaddr', 'loc_load', 'loc_loadw', 'loc_store', 'loc_storew',
-    ), optional(seq('.', $._u16))),
+    ), optional(seq('.', $.u16))),
 
     // stack instructions
     _stack_inst: $ => choice($._dup, $._swap, $._movup, $._movdn, $._adv_push, $._dupw, $._swapw, $._movupw, $._movdnw, $._push),
@@ -88,15 +88,15 @@ module.exports = grammar({
     _swapw: $ => seq('swapw', optional(seq('.', choice('0', '1', '2', '3')))),
     _movupw: $ => seq('movupw', optional(seq('.', choice('2', '3')))),
     _movdnw: $ => seq('movdnw', optional(seq('.', choice('2', '3')))),
-    _push: $ => seq('push', repeat1(seq('.', choice($._felt, $._felt_hex)))), 
+    _push: $ => seq('push', repeat1(seq('.', choice($.felt, $.felt_hex)))), 
 
     // structural "headers"
-    _proc: $ => seq('proc', '.', $._proc_name, optional(seq('.', $._u16))),
-    _export: $ => seq('export', '.', $._proc_name, optional(seq('.', $._u16))),
+    _proc: $ => seq('proc', '.', $._proc_name, optional(seq('.', $.u16))),
+    _export: $ => seq('export', '.', $._proc_name, optional(seq('.', $.u16))),
     _if: $ => seq('if', '.', 'true'),
     _else: $ => 'else',
     _while: $ => seq('while', '.', 'true'),
-    _repeat: $ => seq('repeat', '.', $._u16),
+    _repeat: $ => seq('repeat', '.', $.u16),
     _begin: $ => 'begin',
     _end: $ => 'end',
 
@@ -104,10 +104,10 @@ module.exports = grammar({
     _path: $ => seq($._label, repeat1(seq('::', $._label))),
     _label: $ => /[a-zA-Z][a-zA-Z0-9_]*/,
     _proc_name: $ => /[a-zA-Z][a-zA-Z0-9_]{0,99}/,  // procedure names are limited to 100 chars
-    _felt_hex: $ => seq("0x", /[a-fA-F0-9]{1,16}/),
-    _felt: $ => /[0-9]{1,20}/,
-    _u32: $ => /[0-9]{1,10}/,
-    _u16: $ => /[0-9]{1,6}/,
-    _u8: $ => /[0-9]{1,3}/,
+    felt_hex: $ => seq("0x", /[a-fA-F0-9]{1,16}/),
+    felt: $ => /[0-9]{1,20}/,
+    u32: $ => /[0-9]{1,10}/,
+    u16: $ => /[0-9]{1,6}/,
+    u8: $ => /[0-9]{1,3}/,
   }
 });

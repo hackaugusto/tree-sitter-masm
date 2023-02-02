@@ -184,11 +184,11 @@ enum {
   sym__label = 157,
   sym__proc_name = 158,
   anon_sym_0x = 159,
-  aux_sym__felt_hex_token1 = 160,
-  sym__felt = 161,
-  sym__u32 = 162,
-  sym__u16 = 163,
-  sym__u8 = 164,
+  aux_sym_felt_hex_token1 = 160,
+  sym_felt = 161,
+  sym_u32 = 162,
+  sym_u16 = 163,
+  sym_u8 = 164,
   sym_source_file = 165,
   sym_use = 166,
   sym_export = 167,
@@ -228,7 +228,7 @@ enum {
   sym__while = 201,
   sym__repeat = 202,
   sym__path = 203,
-  sym__felt_hex = 204,
+  sym_felt_hex = 204,
   aux_sym_source_file_repeat1 = 205,
   aux_sym_source_file_repeat2 = 206,
   aux_sym_export_repeat1 = 207,
@@ -397,11 +397,11 @@ static const char * const ts_symbol_names[] = {
   [sym__label] = "_label",
   [sym__proc_name] = "_proc_name",
   [anon_sym_0x] = "0x",
-  [aux_sym__felt_hex_token1] = "_felt_hex_token1",
-  [sym__felt] = "_felt",
-  [sym__u32] = "_u32",
-  [sym__u16] = "_u16",
-  [sym__u8] = "_u8",
+  [aux_sym_felt_hex_token1] = "felt_hex_token1",
+  [sym_felt] = "felt",
+  [sym_u32] = "u32",
+  [sym_u16] = "u16",
+  [sym_u8] = "u8",
   [sym_source_file] = "source_file",
   [sym_use] = "use",
   [sym_export] = "export",
@@ -441,7 +441,7 @@ static const char * const ts_symbol_names[] = {
   [sym__while] = "_while",
   [sym__repeat] = "_repeat",
   [sym__path] = "_path",
-  [sym__felt_hex] = "_felt_hex",
+  [sym_felt_hex] = "felt_hex",
   [aux_sym_source_file_repeat1] = "source_file_repeat1",
   [aux_sym_source_file_repeat2] = "source_file_repeat2",
   [aux_sym_export_repeat1] = "export_repeat1",
@@ -610,11 +610,11 @@ static const TSSymbol ts_symbol_map[] = {
   [sym__label] = sym__label,
   [sym__proc_name] = sym__proc_name,
   [anon_sym_0x] = anon_sym_0x,
-  [aux_sym__felt_hex_token1] = aux_sym__felt_hex_token1,
-  [sym__felt] = sym__felt,
-  [sym__u32] = sym__u32,
-  [sym__u16] = sym__u16,
-  [sym__u8] = sym__u8,
+  [aux_sym_felt_hex_token1] = aux_sym_felt_hex_token1,
+  [sym_felt] = sym_felt,
+  [sym_u32] = sym_u32,
+  [sym_u16] = sym_u16,
+  [sym_u8] = sym_u8,
   [sym_source_file] = sym_source_file,
   [sym_use] = sym_use,
   [sym_export] = sym_export,
@@ -654,7 +654,7 @@ static const TSSymbol ts_symbol_map[] = {
   [sym__while] = sym__while,
   [sym__repeat] = sym__repeat,
   [sym__path] = sym__path,
-  [sym__felt_hex] = sym__felt_hex,
+  [sym_felt_hex] = sym_felt_hex,
   [aux_sym_source_file_repeat1] = aux_sym_source_file_repeat1,
   [aux_sym_source_file_repeat2] = aux_sym_source_file_repeat2,
   [aux_sym_export_repeat1] = aux_sym_export_repeat1,
@@ -1303,24 +1303,24 @@ static const TSSymbolMetadata ts_symbol_metadata[] = {
     .visible = true,
     .named = false,
   },
-  [aux_sym__felt_hex_token1] = {
+  [aux_sym_felt_hex_token1] = {
     .visible = false,
     .named = false,
   },
-  [sym__felt] = {
-    .visible = false,
+  [sym_felt] = {
+    .visible = true,
     .named = true,
   },
-  [sym__u32] = {
-    .visible = false,
+  [sym_u32] = {
+    .visible = true,
     .named = true,
   },
-  [sym__u16] = {
-    .visible = false,
+  [sym_u16] = {
+    .visible = true,
     .named = true,
   },
-  [sym__u8] = {
-    .visible = false,
+  [sym_u8] = {
+    .visible = true,
     .named = true,
   },
   [sym_source_file] = {
@@ -1479,8 +1479,8 @@ static const TSSymbolMetadata ts_symbol_metadata[] = {
     .visible = false,
     .named = true,
   },
-  [sym__felt_hex] = {
-    .visible = false,
+  [sym_felt_hex] = {
+    .visible = true,
     .named = true,
   },
   [aux_sym_source_file_repeat1] = {
@@ -4128,253 +4128,253 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       ACCEPT_TOKEN(anon_sym_0x);
       END_STATE();
     case 595:
-      ACCEPT_TOKEN(aux_sym__felt_hex_token1);
+      ACCEPT_TOKEN(aux_sym_felt_hex_token1);
       END_STATE();
     case 596:
-      ACCEPT_TOKEN(aux_sym__felt_hex_token1);
+      ACCEPT_TOKEN(aux_sym_felt_hex_token1);
       if (('0' <= lookahead && lookahead <= '9') ||
           ('A' <= lookahead && lookahead <= 'F') ||
           ('a' <= lookahead && lookahead <= 'f')) ADVANCE(595);
       END_STATE();
     case 597:
-      ACCEPT_TOKEN(aux_sym__felt_hex_token1);
+      ACCEPT_TOKEN(aux_sym_felt_hex_token1);
       if (('0' <= lookahead && lookahead <= '9') ||
           ('A' <= lookahead && lookahead <= 'F') ||
           ('a' <= lookahead && lookahead <= 'f')) ADVANCE(596);
       END_STATE();
     case 598:
-      ACCEPT_TOKEN(aux_sym__felt_hex_token1);
+      ACCEPT_TOKEN(aux_sym_felt_hex_token1);
       if (('0' <= lookahead && lookahead <= '9') ||
           ('A' <= lookahead && lookahead <= 'F') ||
           ('a' <= lookahead && lookahead <= 'f')) ADVANCE(597);
       END_STATE();
     case 599:
-      ACCEPT_TOKEN(aux_sym__felt_hex_token1);
+      ACCEPT_TOKEN(aux_sym_felt_hex_token1);
       if (('0' <= lookahead && lookahead <= '9') ||
           ('A' <= lookahead && lookahead <= 'F') ||
           ('a' <= lookahead && lookahead <= 'f')) ADVANCE(598);
       END_STATE();
     case 600:
-      ACCEPT_TOKEN(aux_sym__felt_hex_token1);
+      ACCEPT_TOKEN(aux_sym_felt_hex_token1);
       if (('0' <= lookahead && lookahead <= '9') ||
           ('A' <= lookahead && lookahead <= 'F') ||
           ('a' <= lookahead && lookahead <= 'f')) ADVANCE(599);
       END_STATE();
     case 601:
-      ACCEPT_TOKEN(aux_sym__felt_hex_token1);
+      ACCEPT_TOKEN(aux_sym_felt_hex_token1);
       if (('0' <= lookahead && lookahead <= '9') ||
           ('A' <= lookahead && lookahead <= 'F') ||
           ('a' <= lookahead && lookahead <= 'f')) ADVANCE(600);
       END_STATE();
     case 602:
-      ACCEPT_TOKEN(aux_sym__felt_hex_token1);
+      ACCEPT_TOKEN(aux_sym_felt_hex_token1);
       if (('0' <= lookahead && lookahead <= '9') ||
           ('A' <= lookahead && lookahead <= 'F') ||
           ('a' <= lookahead && lookahead <= 'f')) ADVANCE(601);
       END_STATE();
     case 603:
-      ACCEPT_TOKEN(aux_sym__felt_hex_token1);
+      ACCEPT_TOKEN(aux_sym_felt_hex_token1);
       if (('0' <= lookahead && lookahead <= '9') ||
           ('A' <= lookahead && lookahead <= 'F') ||
           ('a' <= lookahead && lookahead <= 'f')) ADVANCE(602);
       END_STATE();
     case 604:
-      ACCEPT_TOKEN(aux_sym__felt_hex_token1);
+      ACCEPT_TOKEN(aux_sym_felt_hex_token1);
       if (('0' <= lookahead && lookahead <= '9') ||
           ('A' <= lookahead && lookahead <= 'F') ||
           ('a' <= lookahead && lookahead <= 'f')) ADVANCE(603);
       END_STATE();
     case 605:
-      ACCEPT_TOKEN(aux_sym__felt_hex_token1);
+      ACCEPT_TOKEN(aux_sym_felt_hex_token1);
       if (('0' <= lookahead && lookahead <= '9') ||
           ('A' <= lookahead && lookahead <= 'F') ||
           ('a' <= lookahead && lookahead <= 'f')) ADVANCE(604);
       END_STATE();
     case 606:
-      ACCEPT_TOKEN(aux_sym__felt_hex_token1);
+      ACCEPT_TOKEN(aux_sym_felt_hex_token1);
       if (('0' <= lookahead && lookahead <= '9') ||
           ('A' <= lookahead && lookahead <= 'F') ||
           ('a' <= lookahead && lookahead <= 'f')) ADVANCE(605);
       END_STATE();
     case 607:
-      ACCEPT_TOKEN(aux_sym__felt_hex_token1);
+      ACCEPT_TOKEN(aux_sym_felt_hex_token1);
       if (('0' <= lookahead && lookahead <= '9') ||
           ('A' <= lookahead && lookahead <= 'F') ||
           ('a' <= lookahead && lookahead <= 'f')) ADVANCE(606);
       END_STATE();
     case 608:
-      ACCEPT_TOKEN(aux_sym__felt_hex_token1);
+      ACCEPT_TOKEN(aux_sym_felt_hex_token1);
       if (('0' <= lookahead && lookahead <= '9') ||
           ('A' <= lookahead && lookahead <= 'F') ||
           ('a' <= lookahead && lookahead <= 'f')) ADVANCE(607);
       END_STATE();
     case 609:
-      ACCEPT_TOKEN(aux_sym__felt_hex_token1);
+      ACCEPT_TOKEN(aux_sym_felt_hex_token1);
       if (('0' <= lookahead && lookahead <= '9') ||
           ('A' <= lookahead && lookahead <= 'F') ||
           ('a' <= lookahead && lookahead <= 'f')) ADVANCE(608);
       END_STATE();
     case 610:
-      ACCEPT_TOKEN(aux_sym__felt_hex_token1);
+      ACCEPT_TOKEN(aux_sym_felt_hex_token1);
       if (('0' <= lookahead && lookahead <= '9') ||
           ('A' <= lookahead && lookahead <= 'F') ||
           ('a' <= lookahead && lookahead <= 'f')) ADVANCE(609);
       END_STATE();
     case 611:
-      ACCEPT_TOKEN(sym__felt);
+      ACCEPT_TOKEN(sym_felt);
       END_STATE();
     case 612:
-      ACCEPT_TOKEN(sym__felt);
+      ACCEPT_TOKEN(sym_felt);
       if (lookahead == 'x') ADVANCE(594);
       if (('0' <= lookahead && lookahead <= '9')) ADVANCE(631);
       END_STATE();
     case 613:
-      ACCEPT_TOKEN(sym__felt);
+      ACCEPT_TOKEN(sym_felt);
       if (('0' <= lookahead && lookahead <= '9')) ADVANCE(631);
       END_STATE();
     case 614:
-      ACCEPT_TOKEN(sym__felt);
+      ACCEPT_TOKEN(sym_felt);
       if (('0' <= lookahead && lookahead <= '9')) ADVANCE(611);
       END_STATE();
     case 615:
-      ACCEPT_TOKEN(sym__felt);
+      ACCEPT_TOKEN(sym_felt);
       if (('0' <= lookahead && lookahead <= '9')) ADVANCE(614);
       END_STATE();
     case 616:
-      ACCEPT_TOKEN(sym__felt);
+      ACCEPT_TOKEN(sym_felt);
       if (('0' <= lookahead && lookahead <= '9')) ADVANCE(615);
       END_STATE();
     case 617:
-      ACCEPT_TOKEN(sym__felt);
+      ACCEPT_TOKEN(sym_felt);
       if (('0' <= lookahead && lookahead <= '9')) ADVANCE(616);
       END_STATE();
     case 618:
-      ACCEPT_TOKEN(sym__felt);
+      ACCEPT_TOKEN(sym_felt);
       if (('0' <= lookahead && lookahead <= '9')) ADVANCE(617);
       END_STATE();
     case 619:
-      ACCEPT_TOKEN(sym__felt);
+      ACCEPT_TOKEN(sym_felt);
       if (('0' <= lookahead && lookahead <= '9')) ADVANCE(618);
       END_STATE();
     case 620:
-      ACCEPT_TOKEN(sym__felt);
+      ACCEPT_TOKEN(sym_felt);
       if (('0' <= lookahead && lookahead <= '9')) ADVANCE(619);
       END_STATE();
     case 621:
-      ACCEPT_TOKEN(sym__felt);
+      ACCEPT_TOKEN(sym_felt);
       if (('0' <= lookahead && lookahead <= '9')) ADVANCE(620);
       END_STATE();
     case 622:
-      ACCEPT_TOKEN(sym__felt);
+      ACCEPT_TOKEN(sym_felt);
       if (('0' <= lookahead && lookahead <= '9')) ADVANCE(621);
       END_STATE();
     case 623:
-      ACCEPT_TOKEN(sym__felt);
+      ACCEPT_TOKEN(sym_felt);
       if (('0' <= lookahead && lookahead <= '9')) ADVANCE(622);
       END_STATE();
     case 624:
-      ACCEPT_TOKEN(sym__felt);
+      ACCEPT_TOKEN(sym_felt);
       if (('0' <= lookahead && lookahead <= '9')) ADVANCE(623);
       END_STATE();
     case 625:
-      ACCEPT_TOKEN(sym__felt);
+      ACCEPT_TOKEN(sym_felt);
       if (('0' <= lookahead && lookahead <= '9')) ADVANCE(624);
       END_STATE();
     case 626:
-      ACCEPT_TOKEN(sym__felt);
+      ACCEPT_TOKEN(sym_felt);
       if (('0' <= lookahead && lookahead <= '9')) ADVANCE(625);
       END_STATE();
     case 627:
-      ACCEPT_TOKEN(sym__felt);
+      ACCEPT_TOKEN(sym_felt);
       if (('0' <= lookahead && lookahead <= '9')) ADVANCE(626);
       END_STATE();
     case 628:
-      ACCEPT_TOKEN(sym__felt);
+      ACCEPT_TOKEN(sym_felt);
       if (('0' <= lookahead && lookahead <= '9')) ADVANCE(627);
       END_STATE();
     case 629:
-      ACCEPT_TOKEN(sym__felt);
+      ACCEPT_TOKEN(sym_felt);
       if (('0' <= lookahead && lookahead <= '9')) ADVANCE(628);
       END_STATE();
     case 630:
-      ACCEPT_TOKEN(sym__felt);
+      ACCEPT_TOKEN(sym_felt);
       if (('0' <= lookahead && lookahead <= '9')) ADVANCE(629);
       END_STATE();
     case 631:
-      ACCEPT_TOKEN(sym__felt);
+      ACCEPT_TOKEN(sym_felt);
       if (('0' <= lookahead && lookahead <= '9')) ADVANCE(630);
       END_STATE();
     case 632:
-      ACCEPT_TOKEN(sym__u32);
+      ACCEPT_TOKEN(sym_u32);
       END_STATE();
     case 633:
-      ACCEPT_TOKEN(sym__u32);
+      ACCEPT_TOKEN(sym_u32);
       if (('0' <= lookahead && lookahead <= '9')) ADVANCE(632);
       END_STATE();
     case 634:
-      ACCEPT_TOKEN(sym__u32);
+      ACCEPT_TOKEN(sym_u32);
       if (('0' <= lookahead && lookahead <= '9')) ADVANCE(633);
       END_STATE();
     case 635:
-      ACCEPT_TOKEN(sym__u32);
+      ACCEPT_TOKEN(sym_u32);
       if (('0' <= lookahead && lookahead <= '9')) ADVANCE(634);
       END_STATE();
     case 636:
-      ACCEPT_TOKEN(sym__u32);
+      ACCEPT_TOKEN(sym_u32);
       if (('0' <= lookahead && lookahead <= '9')) ADVANCE(635);
       END_STATE();
     case 637:
-      ACCEPT_TOKEN(sym__u32);
+      ACCEPT_TOKEN(sym_u32);
       if (('0' <= lookahead && lookahead <= '9')) ADVANCE(636);
       END_STATE();
     case 638:
-      ACCEPT_TOKEN(sym__u32);
+      ACCEPT_TOKEN(sym_u32);
       if (('0' <= lookahead && lookahead <= '9')) ADVANCE(637);
       END_STATE();
     case 639:
-      ACCEPT_TOKEN(sym__u32);
+      ACCEPT_TOKEN(sym_u32);
       if (('0' <= lookahead && lookahead <= '9')) ADVANCE(638);
       END_STATE();
     case 640:
-      ACCEPT_TOKEN(sym__u32);
+      ACCEPT_TOKEN(sym_u32);
       if (('0' <= lookahead && lookahead <= '9')) ADVANCE(639);
       END_STATE();
     case 641:
-      ACCEPT_TOKEN(sym__u32);
+      ACCEPT_TOKEN(sym_u32);
       if (('0' <= lookahead && lookahead <= '9')) ADVANCE(640);
       END_STATE();
     case 642:
-      ACCEPT_TOKEN(sym__u16);
+      ACCEPT_TOKEN(sym_u16);
       END_STATE();
     case 643:
-      ACCEPT_TOKEN(sym__u16);
+      ACCEPT_TOKEN(sym_u16);
       if (('0' <= lookahead && lookahead <= '9')) ADVANCE(642);
       END_STATE();
     case 644:
-      ACCEPT_TOKEN(sym__u16);
+      ACCEPT_TOKEN(sym_u16);
       if (('0' <= lookahead && lookahead <= '9')) ADVANCE(643);
       END_STATE();
     case 645:
-      ACCEPT_TOKEN(sym__u16);
+      ACCEPT_TOKEN(sym_u16);
       if (('0' <= lookahead && lookahead <= '9')) ADVANCE(644);
       END_STATE();
     case 646:
-      ACCEPT_TOKEN(sym__u16);
+      ACCEPT_TOKEN(sym_u16);
       if (('0' <= lookahead && lookahead <= '9')) ADVANCE(645);
       END_STATE();
     case 647:
-      ACCEPT_TOKEN(sym__u16);
+      ACCEPT_TOKEN(sym_u16);
       if (('0' <= lookahead && lookahead <= '9')) ADVANCE(646);
       END_STATE();
     case 648:
-      ACCEPT_TOKEN(sym__u8);
+      ACCEPT_TOKEN(sym_u8);
       END_STATE();
     case 649:
-      ACCEPT_TOKEN(sym__u8);
+      ACCEPT_TOKEN(sym_u8);
       if (('0' <= lookahead && lookahead <= '9')) ADVANCE(648);
       END_STATE();
     case 650:
-      ACCEPT_TOKEN(sym__u8);
+      ACCEPT_TOKEN(sym_u8);
       if (('0' <= lookahead && lookahead <= '9')) ADVANCE(649);
       END_STATE();
     default:
@@ -4633,10 +4633,10 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_repeat] = ACTIONS(1),
     [sym__begin] = ACTIONS(1),
     [sym__end] = ACTIONS(1),
-    [sym__felt] = ACTIONS(1),
-    [sym__u32] = ACTIONS(1),
-    [sym__u16] = ACTIONS(1),
-    [sym__u8] = ACTIONS(1),
+    [sym_felt] = ACTIONS(1),
+    [sym_u32] = ACTIONS(1),
+    [sym_u16] = ACTIONS(1),
+    [sym_u8] = ACTIONS(1),
   },
   [1] = {
     [sym_source_file] = STATE(138),
@@ -14936,9 +14936,9 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(511), 1,
       anon_sym_0x,
     ACTIONS(513), 1,
-      sym__felt,
+      sym_felt,
     STATE(38), 1,
-      sym__felt_hex,
+      sym_felt_hex,
   [402] = 3,
     ACTIONS(3), 1,
       sym_comment,
@@ -14997,7 +14997,7 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(3), 1,
       sym_comment,
     ACTIONS(529), 1,
-      sym__u8,
+      sym_u8,
   [484] = 2,
     ACTIONS(3), 1,
       sym_comment,
@@ -15007,17 +15007,17 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(3), 1,
       sym_comment,
     ACTIONS(533), 1,
-      sym__u16,
+      sym_u16,
   [498] = 2,
     ACTIONS(3), 1,
       sym_comment,
     ACTIONS(535), 1,
-      sym__u32,
+      sym_u32,
   [505] = 2,
     ACTIONS(3), 1,
       sym_comment,
     ACTIONS(537), 1,
-      sym__felt,
+      sym_felt,
   [512] = 2,
     ACTIONS(3), 1,
       sym_comment,
@@ -15037,7 +15037,7 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(3), 1,
       sym_comment,
     ACTIONS(545), 1,
-      aux_sym__felt_hex_token1,
+      aux_sym_felt_hex_token1,
   [540] = 2,
     ACTIONS(3), 1,
       sym_comment,
@@ -15057,7 +15057,7 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(3), 1,
       sym_comment,
     ACTIONS(551), 1,
-      sym__u16,
+      sym_u16,
   [568] = 2,
     ACTIONS(3), 1,
       sym_comment,
@@ -15087,7 +15087,7 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(3), 1,
       sym_comment,
     ACTIONS(563), 1,
-      sym__u16,
+      sym_u16,
   [610] = 2,
     ACTIONS(3), 1,
       sym_comment,
@@ -15122,7 +15122,7 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(3), 1,
       sym_comment,
     ACTIONS(577), 1,
-      sym__u32,
+      sym_u32,
   [659] = 2,
     ACTIONS(3), 1,
       sym_comment,
@@ -15147,7 +15147,7 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(3), 1,
       sym_comment,
     ACTIONS(587), 1,
-      sym__u16,
+      sym_u16,
   [694] = 2,
     ACTIONS(3), 1,
       sym_comment,
@@ -15172,7 +15172,7 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(3), 1,
       sym_comment,
     ACTIONS(595), 1,
-      sym__u32,
+      sym_u32,
   [729] = 2,
     ACTIONS(3), 1,
       sym_comment,
@@ -15341,8 +15341,8 @@ static const TSParseActionEntry ts_parse_actions[] = {
   [199] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__u32_inst, 1),
   [201] = {.entry = {.count = 1, .reusable = true}}, SHIFT(109),
   [203] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym__u32_inst, 1),
-  [205] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__felt_hex, 2),
-  [207] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym__felt_hex, 2),
+  [205] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_felt_hex, 2),
+  [207] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_felt_hex, 2),
   [209] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__exp, 1),
   [211] = {.entry = {.count = 1, .reusable = true}}, SHIFT(111),
   [213] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym__exp, 1),

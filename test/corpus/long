@@ -1,6 +1,6 @@
-=============
-MAIN FEATURES
-=============
+====
+LONG
+====
 
 use std::mem
 
@@ -52,29 +52,38 @@ end
     (source_file
       (use)
       (proc)
-      (proc)
+      (proc
+        (u16))
       (proc
         (opcode))
       (proc
+        (u16)
         (opcode))
       (export)
-      (export)
+      (export
+        (u16))
       (export
         (opcode))
       (export
+        (u16)
         (opcode))
       (main
         (opcode)
         (opcode)
+        (opcode
+          (u32)
+          (u32))
+        (opcode)
+        (opcode
+          (u8))
         (opcode)
         (opcode)
         (opcode)
+        (opcode
+          (felt))
         (opcode)
-        (opcode)
-        (opcode)
-        (opcode)
-        (opcode)
-        (opcode)
+        (opcode
+           (u32))
         (if)
         (if
           (opcode))
@@ -84,8 +93,10 @@ end
         (while)
         (while
           (opcode))
-        (repeat)
         (repeat
+          (u16))
+        (repeat
+          (u16)
           (opcode))
         (call)
         (call)

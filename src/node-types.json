@@ -46,11 +46,20 @@
           "named": true
         },
         {
+          "type": "u16",
+          "named": true
+        },
+        {
           "type": "while",
           "named": true
         }
       ]
     }
+  },
+  {
+    "type": "felt_hex",
+    "named": true,
+    "fields": {}
   },
   {
     "type": "if",
@@ -184,7 +193,33 @@
   {
     "type": "opcode",
     "named": true,
-    "fields": {}
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "felt",
+          "named": true
+        },
+        {
+          "type": "felt_hex",
+          "named": true
+        },
+        {
+          "type": "u16",
+          "named": true
+        },
+        {
+          "type": "u32",
+          "named": true
+        },
+        {
+          "type": "u8",
+          "named": true
+        }
+      ]
+    }
   },
   {
     "type": "proc",
@@ -223,6 +258,10 @@
           "named": true
         },
         {
+          "type": "u16",
+          "named": true
+        },
+        {
           "type": "while",
           "named": true
         }
@@ -235,7 +274,7 @@
     "fields": {},
     "children": {
       "multiple": true,
-      "required": false,
+      "required": true,
       "types": [
         {
           "type": "call",
@@ -263,6 +302,10 @@
         },
         {
           "type": "syscall",
+          "named": true
+        },
+        {
+          "type": "u16",
           "named": true
         },
         {
@@ -561,6 +604,10 @@
     "named": false
   },
   {
+    "type": "felt",
+    "named": true
+  },
+  {
     "type": "gt",
     "named": false
   },
@@ -739,6 +786,14 @@
   {
     "type": "u",
     "named": false
+  },
+  {
+    "type": "u16",
+    "named": true
+  },
+  {
+    "type": "u32",
+    "named": true
   },
   {
     "type": "u32assert",
@@ -955,6 +1010,10 @@
   {
     "type": "u64div",
     "named": false
+  },
+  {
+    "type": "u8",
+    "named": true
   },
   {
     "type": "use",

@@ -742,7 +742,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "_u32"
+          "name": "u32"
         },
         {
           "type": "STRING",
@@ -750,7 +750,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "_u32"
+          "name": "u32"
         }
       ]
     },
@@ -777,7 +777,7 @@
                 },
                 {
                   "type": "SYMBOL",
-                  "name": "_u8"
+                  "name": "u8"
                 }
               ]
             },
@@ -854,7 +854,7 @@
                 },
                 {
                   "type": "SYMBOL",
-                  "name": "_felt"
+                  "name": "felt"
                 }
               ]
             },
@@ -1001,7 +1001,7 @@
                 },
                 {
                   "type": "SYMBOL",
-                  "name": "_u32"
+                  "name": "u32"
                 }
               ]
             },
@@ -1052,7 +1052,7 @@
                 },
                 {
                   "type": "SYMBOL",
-                  "name": "_u16"
+                  "name": "u16"
                 }
               ]
             },
@@ -1776,11 +1776,11 @@
                 "members": [
                   {
                     "type": "SYMBOL",
-                    "name": "_felt"
+                    "name": "felt"
                   },
                   {
                     "type": "SYMBOL",
-                    "name": "_felt_hex"
+                    "name": "felt_hex"
                   }
                 ]
               }
@@ -1816,7 +1816,7 @@
                 },
                 {
                   "type": "SYMBOL",
-                  "name": "_u16"
+                  "name": "u16"
                 }
               ]
             },
@@ -1854,7 +1854,7 @@
                 },
                 {
                   "type": "SYMBOL",
-                  "name": "_u16"
+                  "name": "u16"
                 }
               ]
             },
@@ -1916,7 +1916,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "_u16"
+          "name": "u16"
         }
       ]
     },
@@ -1961,7 +1961,7 @@
       "type": "PATTERN",
       "value": "[a-zA-Z][a-zA-Z0-9_]{0,99}"
     },
-    "_felt_hex": {
+    "felt_hex": {
       "type": "SEQ",
       "members": [
         {
@@ -1974,19 +1974,19 @@
         }
       ]
     },
-    "_felt": {
+    "felt": {
       "type": "PATTERN",
       "value": "[0-9]{1,20}"
     },
-    "_u32": {
+    "u32": {
       "type": "PATTERN",
       "value": "[0-9]{1,10}"
     },
-    "_u16": {
+    "u16": {
       "type": "PATTERN",
       "value": "[0-9]{1,6}"
     },
-    "_u8": {
+    "u8": {
       "type": "PATTERN",
       "value": "[0-9]{1,3}"
     }

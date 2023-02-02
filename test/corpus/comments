@@ -1,0 +1,21 @@
+========
+COMMENTS
+========
+
+# This is a comment
+
+#! This is documentation
+proc.test
+  # stack: [1, ...]
+  push.1
+end
+
+---
+
+    (source_file
+      (comment)
+      (comment)
+      (proc
+        (comment)
+        (opcode
+          (felt))))
