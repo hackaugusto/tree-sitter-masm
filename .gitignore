@@ -1,0 +1,10 @@
+# dependencies
+Cargo.lock
+package-lock.json
+node_modules
+
+# vim backup files
+*~
+
+# binary files
+tree-sitter-masm.wasm
