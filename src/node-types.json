@@ -278,7 +278,7 @@
     "fields": {},
     "children": {
       "multiple": true,
-      "required": true,
+      "required": false,
       "types": [
         {
           "type": "export",
@@ -483,6 +483,10 @@
   {
     "type": "cdropw",
     "named": false
+  },
+  {
+    "type": "comment",
+    "named": true
   },
   {
     "type": "cswap",

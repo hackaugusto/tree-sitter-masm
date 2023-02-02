@@ -1,9 +1,11 @@
 module.exports = grammar({
   name: 'masm',
 
+  extras: $ => [$.comment, /[\s]/],
   rules: {
-    source_file: $ => seq(repeat($.use), repeat(choice($.proc, $.export)), $.main),
+    source_file: $ => seq(repeat($.use), repeat(choice($.proc, $.export)), optional($.main)),
 
+    comment: $ => token(seq('#', /.*/)),
     use: $ => seq('use', $._path),
     export: $ => seq($._export, repeat($._block), $._end),
     proc: $ => seq($._proc, repeat($._block), $._end),
@@ -18,9 +20,14 @@ module.exports = grammar({
     call: $ => seq('call', '.', $._label, optional(seq('::', $._label))),
     syscall: $ => seq('syscall', '.', $._label, optional(seq('::', $._label))),
 
-    _block: $ => seq(choice($.opcode, $.if, $.if_else, $.while, $.repeat, $.call, $.exec, $.syscall)),
+    _block: $ => seq(choice(
+        $.opcode, $.if, $.if_else, $.while, $.repeat, $.call, $.exec, $.syscall
+    )),
 
-    opcode: $ => choice($._simple_inst, $._adv_inst, $._adv_mem, $._exp, $._assert, $._felt_inst, $._u32_inst),
+    opcode: $ => choice(
+        $._simple_inst, $._adv_inst, $._adv_mem, $._exp, $._assert,
+        $._felt_inst, $._u32_inst, $._u16_inst, $._stack_inst
+    ),
 
     // simple instructions
     _simple_inst: $ => choice(

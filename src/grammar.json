@@ -28,10 +28,34 @@
           }
         },
         {
-          "type": "SYMBOL",
-          "name": "main"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "main"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         }
       ]
+    },
+    "comment": {
+      "type": "TOKEN",
+      "content": {
+        "type": "SEQ",
+        "members": [
+          {
+            "type": "STRING",
+            "value": "#"
+          },
+          {
+            "type": "PATTERN",
+            "value": ".*"
+          }
+        ]
+      }
     },
     "use": {
       "type": "SEQ",
@@ -383,6 +407,14 @@
         {
           "type": "SYMBOL",
           "name": "_u32_inst"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_u16_inst"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_stack_inst"
         }
       ]
     },
@@ -711,6 +743,10 @@
         {
           "type": "SYMBOL",
           "name": "_u32"
+        },
+        {
+          "type": "STRING",
+          "value": "."
         },
         {
           "type": "SYMBOL",
@@ -1919,7 +1955,7 @@
     },
     "_label": {
       "type": "PATTERN",
-      "value": "[a-zA-Z][a-zA-Z0-9_]"
+      "value": "[a-zA-Z][a-zA-Z0-9_]*"
     },
     "_proc_name": {
       "type": "PATTERN",
@@ -1957,8 +1993,12 @@
   },
   "extras": [
     {
+      "type": "SYMBOL",
+      "name": "comment"
+    },
+    {
       "type": "PATTERN",
-      "value": "\\s"
+      "value": "[\\s]"
     }
   ],
   "conflicts": [],
