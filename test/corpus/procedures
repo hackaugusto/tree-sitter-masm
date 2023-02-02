@@ -1,0 +1,95 @@
+=============
+MAIN FEATURES
+=============
+
+use std::mem
+
+proc.test end
+proc.with_locals.2 end
+proc.test assert end
+proc.with_locals.2 assert end
+
+export.test end
+export.with_locals.2 end
+export.test assert end
+export.with_locals.2 assert end
+
+begin
+  assert
+  adv.keyval
+  adv.mem.1.2
+  exp
+  exp.u1
+  u32assert.1
+  u32assert.2
+  add
+  add.1
+  u32checked_add
+  u32checked_add.1
+
+  if.true end
+  if.true assert end
+  if.true assert else assert end
+
+  while.true end
+  while.true assert end
+
+  repeat.5 end
+  repeat.5 assert end
+
+  call.test
+  call.mem::memcopy
+
+  exec.test
+  exec.mem::memcopy
+
+  syscall.test
+  syscall.mem::memcopy
+end
+
+---
+
+    (source_file
+      (use)
+      (proc)
+      (proc)
+      (proc
+        (opcode))
+      (proc
+        (opcode))
+      (export)
+      (export)
+      (export
+        (opcode))
+      (export
+        (opcode))
+      (main
+        (opcode)
+        (opcode)
+        (opcode)
+        (opcode)
+        (opcode)
+        (opcode)
+        (opcode)
+        (opcode)
+        (opcode)
+        (opcode)
+        (opcode)
+        (if)
+        (if
+          (opcode))
+        (if_else
+          (opcode)
+          (opcode))
+        (while)
+        (while
+          (opcode))
+        (repeat)
+        (repeat
+          (opcode))
+        (call)
+        (call)
+        (exec)
+        (exec)
+        (syscall)
+        (syscall)))

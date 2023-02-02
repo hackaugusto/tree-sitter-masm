@@ -1,0 +1,967 @@
+[
+  {
+    "type": "call",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "exec",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "export",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "call",
+          "named": true
+        },
+        {
+          "type": "exec",
+          "named": true
+        },
+        {
+          "type": "if",
+          "named": true
+        },
+        {
+          "type": "if_else",
+          "named": true
+        },
+        {
+          "type": "opcode",
+          "named": true
+        },
+        {
+          "type": "repeat",
+          "named": true
+        },
+        {
+          "type": "syscall",
+          "named": true
+        },
+        {
+          "type": "while",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "if",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "call",
+          "named": true
+        },
+        {
+          "type": "exec",
+          "named": true
+        },
+        {
+          "type": "if",
+          "named": true
+        },
+        {
+          "type": "if_else",
+          "named": true
+        },
+        {
+          "type": "opcode",
+          "named": true
+        },
+        {
+          "type": "repeat",
+          "named": true
+        },
+        {
+          "type": "syscall",
+          "named": true
+        },
+        {
+          "type": "while",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "if_else",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "call",
+          "named": true
+        },
+        {
+          "type": "exec",
+          "named": true
+        },
+        {
+          "type": "if",
+          "named": true
+        },
+        {
+          "type": "if_else",
+          "named": true
+        },
+        {
+          "type": "opcode",
+          "named": true
+        },
+        {
+          "type": "repeat",
+          "named": true
+        },
+        {
+          "type": "syscall",
+          "named": true
+        },
+        {
+          "type": "while",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "main",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "call",
+          "named": true
+        },
+        {
+          "type": "exec",
+          "named": true
+        },
+        {
+          "type": "if",
+          "named": true
+        },
+        {
+          "type": "if_else",
+          "named": true
+        },
+        {
+          "type": "opcode",
+          "named": true
+        },
+        {
+          "type": "repeat",
+          "named": true
+        },
+        {
+          "type": "syscall",
+          "named": true
+        },
+        {
+          "type": "while",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "opcode",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "proc",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "call",
+          "named": true
+        },
+        {
+          "type": "exec",
+          "named": true
+        },
+        {
+          "type": "if",
+          "named": true
+        },
+        {
+          "type": "if_else",
+          "named": true
+        },
+        {
+          "type": "opcode",
+          "named": true
+        },
+        {
+          "type": "repeat",
+          "named": true
+        },
+        {
+          "type": "syscall",
+          "named": true
+        },
+        {
+          "type": "while",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "repeat",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "call",
+          "named": true
+        },
+        {
+          "type": "exec",
+          "named": true
+        },
+        {
+          "type": "if",
+          "named": true
+        },
+        {
+          "type": "if_else",
+          "named": true
+        },
+        {
+          "type": "opcode",
+          "named": true
+        },
+        {
+          "type": "repeat",
+          "named": true
+        },
+        {
+          "type": "syscall",
+          "named": true
+        },
+        {
+          "type": "while",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "source_file",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "export",
+          "named": true
+        },
+        {
+          "type": "main",
+          "named": true
+        },
+        {
+          "type": "proc",
+          "named": true
+        },
+        {
+          "type": "use",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "syscall",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "use",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "while",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "call",
+          "named": true
+        },
+        {
+          "type": "exec",
+          "named": true
+        },
+        {
+          "type": "if",
+          "named": true
+        },
+        {
+          "type": "if_else",
+          "named": true
+        },
+        {
+          "type": "opcode",
+          "named": true
+        },
+        {
+          "type": "repeat",
+          "named": true
+        },
+        {
+          "type": "syscall",
+          "named": true
+        },
+        {
+          "type": "while",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": ".",
+    "named": false
+  },
+  {
+    "type": "0",
+    "named": false
+  },
+  {
+    "type": "0x",
+    "named": false
+  },
+  {
+    "type": "1",
+    "named": false
+  },
+  {
+    "type": "10",
+    "named": false
+  },
+  {
+    "type": "11",
+    "named": false
+  },
+  {
+    "type": "12",
+    "named": false
+  },
+  {
+    "type": "13",
+    "named": false
+  },
+  {
+    "type": "14",
+    "named": false
+  },
+  {
+    "type": "15",
+    "named": false
+  },
+  {
+    "type": "16",
+    "named": false
+  },
+  {
+    "type": "2",
+    "named": false
+  },
+  {
+    "type": "3",
+    "named": false
+  },
+  {
+    "type": "4",
+    "named": false
+  },
+  {
+    "type": "5",
+    "named": false
+  },
+  {
+    "type": "6",
+    "named": false
+  },
+  {
+    "type": "7",
+    "named": false
+  },
+  {
+    "type": "8",
+    "named": false
+  },
+  {
+    "type": "9",
+    "named": false
+  },
+  {
+    "type": "::",
+    "named": false
+  },
+  {
+    "type": "add",
+    "named": false
+  },
+  {
+    "type": "adv",
+    "named": false
+  },
+  {
+    "type": "adv_loadw",
+    "named": false
+  },
+  {
+    "type": "adv_pipe",
+    "named": false
+  },
+  {
+    "type": "adv_push",
+    "named": false
+  },
+  {
+    "type": "and",
+    "named": false
+  },
+  {
+    "type": "assert",
+    "named": false
+  },
+  {
+    "type": "assert_eq",
+    "named": false
+  },
+  {
+    "type": "assertz",
+    "named": false
+  },
+  {
+    "type": "call",
+    "named": false
+  },
+  {
+    "type": "caller",
+    "named": false
+  },
+  {
+    "type": "cdrop",
+    "named": false
+  },
+  {
+    "type": "cdropw",
+    "named": false
+  },
+  {
+    "type": "cswap",
+    "named": false
+  },
+  {
+    "type": "cswapw",
+    "named": false
+  },
+  {
+    "type": "drop",
+    "named": false
+  },
+  {
+    "type": "dropw",
+    "named": false
+  },
+  {
+    "type": "dup",
+    "named": false
+  },
+  {
+    "type": "dupw",
+    "named": false
+  },
+  {
+    "type": "eq",
+    "named": false
+  },
+  {
+    "type": "eqw",
+    "named": false
+  },
+  {
+    "type": "exec",
+    "named": false
+  },
+  {
+    "type": "exp",
+    "named": false
+  },
+  {
+    "type": "export",
+    "named": false
+  },
+  {
+    "type": "ext2add",
+    "named": false
+  },
+  {
+    "type": "ext2div",
+    "named": false
+  },
+  {
+    "type": "ext2intt",
+    "named": false
+  },
+  {
+    "type": "ext2inv",
+    "named": false
+  },
+  {
+    "type": "ext2mul",
+    "named": false
+  },
+  {
+    "type": "ext2neg",
+    "named": false
+  },
+  {
+    "type": "ext2sub",
+    "named": false
+  },
+  {
+    "type": "gt",
+    "named": false
+  },
+  {
+    "type": "gte",
+    "named": false
+  },
+  {
+    "type": "if",
+    "named": false
+  },
+  {
+    "type": "inv",
+    "named": false
+  },
+  {
+    "type": "keyval",
+    "named": false
+  },
+  {
+    "type": "loc_load",
+    "named": false
+  },
+  {
+    "type": "loc_loadw",
+    "named": false
+  },
+  {
+    "type": "loc_store",
+    "named": false
+  },
+  {
+    "type": "loc_storew",
+    "named": false
+  },
+  {
+    "type": "locaddr",
+    "named": false
+  },
+  {
+    "type": "lt",
+    "named": false
+  },
+  {
+    "type": "lte",
+    "named": false
+  },
+  {
+    "type": "mem",
+    "named": false
+  },
+  {
+    "type": "mem_load",
+    "named": false
+  },
+  {
+    "type": "mem_loadw",
+    "named": false
+  },
+  {
+    "type": "mem_store",
+    "named": false
+  },
+  {
+    "type": "mem_storew",
+    "named": false
+  },
+  {
+    "type": "mem_stream",
+    "named": false
+  },
+  {
+    "type": "movdn",
+    "named": false
+  },
+  {
+    "type": "movdnw",
+    "named": false
+  },
+  {
+    "type": "movup",
+    "named": false
+  },
+  {
+    "type": "movupw",
+    "named": false
+  },
+  {
+    "type": "mtree_cwm",
+    "named": false
+  },
+  {
+    "type": "mtree_get",
+    "named": false
+  },
+  {
+    "type": "mtree_set",
+    "named": false
+  },
+  {
+    "type": "mul",
+    "named": false
+  },
+  {
+    "type": "neg",
+    "named": false
+  },
+  {
+    "type": "neq",
+    "named": false
+  },
+  {
+    "type": "not",
+    "named": false
+  },
+  {
+    "type": "or",
+    "named": false
+  },
+  {
+    "type": "padw",
+    "named": false
+  },
+  {
+    "type": "pow2",
+    "named": false
+  },
+  {
+    "type": "proc",
+    "named": false
+  },
+  {
+    "type": "push",
+    "named": false
+  },
+  {
+    "type": "repeat",
+    "named": false
+  },
+  {
+    "type": "rphash",
+    "named": false
+  },
+  {
+    "type": "rpperm",
+    "named": false
+  },
+  {
+    "type": "sdepth",
+    "named": false
+  },
+  {
+    "type": "sub",
+    "named": false
+  },
+  {
+    "type": "swap",
+    "named": false
+  },
+  {
+    "type": "swapdw",
+    "named": false
+  },
+  {
+    "type": "swapw",
+    "named": false
+  },
+  {
+    "type": "syscall",
+    "named": false
+  },
+  {
+    "type": "true",
+    "named": false
+  },
+  {
+    "type": "u",
+    "named": false
+  },
+  {
+    "type": "u32assert",
+    "named": false
+  },
+  {
+    "type": "u32assertw",
+    "named": false
+  },
+  {
+    "type": "u32cast",
+    "named": false
+  },
+  {
+    "type": "u32checked_add",
+    "named": false
+  },
+  {
+    "type": "u32checked_and",
+    "named": false
+  },
+  {
+    "type": "u32checked_div",
+    "named": false
+  },
+  {
+    "type": "u32checked_divmod",
+    "named": false
+  },
+  {
+    "type": "u32checked_eq",
+    "named": false
+  },
+  {
+    "type": "u32checked_gt",
+    "named": false
+  },
+  {
+    "type": "u32checked_gte",
+    "named": false
+  },
+  {
+    "type": "u32checked_lt",
+    "named": false
+  },
+  {
+    "type": "u32checked_lte",
+    "named": false
+  },
+  {
+    "type": "u32checked_max",
+    "named": false
+  },
+  {
+    "type": "u32checked_min",
+    "named": false
+  },
+  {
+    "type": "u32checked_mod",
+    "named": false
+  },
+  {
+    "type": "u32checked_mul",
+    "named": false
+  },
+  {
+    "type": "u32checked_neq",
+    "named": false
+  },
+  {
+    "type": "u32checked_not",
+    "named": false
+  },
+  {
+    "type": "u32checked_or",
+    "named": false
+  },
+  {
+    "type": "u32checked_popcnt",
+    "named": false
+  },
+  {
+    "type": "u32checked_rotl",
+    "named": false
+  },
+  {
+    "type": "u32checked_rotr",
+    "named": false
+  },
+  {
+    "type": "u32checked_shl",
+    "named": false
+  },
+  {
+    "type": "u32checked_shr",
+    "named": false
+  },
+  {
+    "type": "u32checked_sub",
+    "named": false
+  },
+  {
+    "type": "u32checked_xor",
+    "named": false
+  },
+  {
+    "type": "u32overflowing_add",
+    "named": false
+  },
+  {
+    "type": "u32overflowing_add3",
+    "named": false
+  },
+  {
+    "type": "u32overflowing_madd",
+    "named": false
+  },
+  {
+    "type": "u32overflowing_mul",
+    "named": false
+  },
+  {
+    "type": "u32overflowing_sub",
+    "named": false
+  },
+  {
+    "type": "u32split",
+    "named": false
+  },
+  {
+    "type": "u32test",
+    "named": false
+  },
+  {
+    "type": "u32testw",
+    "named": false
+  },
+  {
+    "type": "u32unchecked_div",
+    "named": false
+  },
+  {
+    "type": "u32unchecked_divmod",
+    "named": false
+  },
+  {
+    "type": "u32unchecked_gt",
+    "named": false
+  },
+  {
+    "type": "u32unchecked_gte",
+    "named": false
+  },
+  {
+    "type": "u32unchecked_lt",
+    "named": false
+  },
+  {
+    "type": "u32unchecked_lte",
+    "named": false
+  },
+  {
+    "type": "u32unchecked_max",
+    "named": false
+  },
+  {
+    "type": "u32unchecked_min",
+    "named": false
+  },
+  {
+    "type": "u32unchecked_mod",
+    "named": false
+  },
+  {
+    "type": "u32unchecked_popcnt",
+    "named": false
+  },
+  {
+    "type": "u32unchecked_rotl",
+    "named": false
+  },
+  {
+    "type": "u32unchecked_rotr",
+    "named": false
+  },
+  {
+    "type": "u32unchecked_shl",
+    "named": false
+  },
+  {
+    "type": "u32unchecked_shr",
+    "named": false
+  },
+  {
+    "type": "u32wrapping_add",
+    "named": false
+  },
+  {
+    "type": "u32wrapping_add3",
+    "named": false
+  },
+  {
+    "type": "u32wrapping_madd",
+    "named": false
+  },
+  {
+    "type": "u32wrapping_mul",
+    "named": false
+  },
+  {
+    "type": "u32wrapping_sub",
+    "named": false
+  },
+  {
+    "type": "u64div",
+    "named": false
+  },
+  {
+    "type": "use",
+    "named": false
+  },
+  {
+    "type": "while",
+    "named": false
+  },
+  {
+    "type": "xor",
+    "named": false
+  }
+]
