@@ -1229,10 +1229,6 @@
                   "members": [
                     {
                       "type": "STRING",
-                      "value": "0"
-                    },
-                    {
-                      "type": "STRING",
                       "value": "1"
                     },
                     {
@@ -1324,14 +1320,6 @@
                   "members": [
                     {
                       "type": "STRING",
-                      "value": "0"
-                    },
-                    {
-                      "type": "STRING",
-                      "value": "1"
-                    },
-                    {
-                      "type": "STRING",
                       "value": "2"
                     },
                     {
@@ -1417,14 +1405,6 @@
                 {
                   "type": "CHOICE",
                   "members": [
-                    {
-                      "type": "STRING",
-                      "value": "0"
-                    },
-                    {
-                      "type": "STRING",
-                      "value": "1"
-                    },
                     {
                       "type": "STRING",
                       "value": "2"
@@ -1654,10 +1634,6 @@
                 {
                   "type": "CHOICE",
                   "members": [
-                    {
-                      "type": "STRING",
-                      "value": "0"
-                    },
                     {
                       "type": "STRING",
                       "value": "1"
