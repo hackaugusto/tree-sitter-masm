@@ -56,7 +56,7 @@ module.exports = grammar({
     _assert: $ => seq('u32assert', '.', choice('1', '2')),
 
     // field element instructions
-    _felt_inst: $ => seq(choice('add', 'sub', 'mul', 'eq', 'neq'), optional(seq('.', $.felt))),
+    _felt_inst: $ => seq(choice('add', 'sub', 'mul', 'eq', 'neq', 'div'), optional(seq('.', $.felt))),
 
     // u32 instructions
     _u32_inst: $ => seq(choice(
