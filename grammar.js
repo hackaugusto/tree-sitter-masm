@@ -44,7 +44,7 @@ module.exports = grammar({
       'u32checked_max', 'u32unchecked_max', 'drop', 'dropw', 'padw',
       'swapdw', 'cswap', 'cswapw', 'cdrop', 'cdropw', 'sdepth', 'mem_stream',
       'adv_pipe', 'adv_loadw', 'hmerge', 'hperm', 'mtree_get', 'mtree_set',
-      'mtree_cwm', 'caller', 'is_odd', 'assert_eqw',
+      'mtree_cwm', 'caller', 'is_odd', 'assert_eqw', 'clk', 'fri_ext2fold4', 'hash'
     ),
 
     // advice instructions
