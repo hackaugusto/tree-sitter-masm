@@ -43,7 +43,7 @@ module.exports = grammar({
       'u32unchecked_gte', 'u32checked_min', 'u32unchecked_min',
       'u32checked_max', 'u32unchecked_max', 'drop', 'dropw', 'padw',
       'swapdw', 'cswap', 'cswapw', 'cdrop', 'cdropw', 'sdepth', 'mem_stream',
-      'adv_pipe', 'adv_loadw', 'rphash', 'rpperm', 'mtree_get', 'mtree_set',
+      'adv_pipe', 'adv_loadw', 'hmerge', 'hperm', 'mtree_get', 'mtree_set',
       'mtree_cwm', 'caller', 'is_odd', 'assert_eqw',
     ),
 
