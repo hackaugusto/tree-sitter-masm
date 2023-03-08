@@ -96,7 +96,7 @@ module.exports = grammar({
     _if: $ => seq('if', '.', 'true'),
     _else: $ => 'else',
     _while: $ => seq('while', '.', 'true'),
-    _repeat: $ => seq('repeat', '.', $.u16),
+    _repeat: $ => seq('repeat', '.', $.u32),
     _begin: $ => 'begin',
     _end: $ => 'end',
 
