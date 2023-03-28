@@ -5,6 +5,25 @@
     "fields": {}
   },
   {
+    "type": "const",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "felt",
+          "named": true
+        },
+        {
+          "type": "uppercase",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "exec",
     "named": true,
     "fields": {}
@@ -217,6 +236,10 @@
         {
           "type": "u8",
           "named": true
+        },
+        {
+          "type": "uppercase",
+          "named": true
         }
       ]
     }
@@ -305,7 +328,7 @@
           "named": true
         },
         {
-          "type": "u16",
+          "type": "u32",
           "named": true
         },
         {
@@ -323,6 +346,10 @@
       "multiple": true,
       "required": false,
       "types": [
+        {
+          "type": "const",
+          "named": true
+        },
         {
           "type": "export",
           "named": true
@@ -487,6 +514,10 @@
     "named": false
   },
   {
+    "type": "=",
+    "named": false
+  },
+  {
     "type": "add",
     "named": false
   },
@@ -519,6 +550,10 @@
     "named": false
   },
   {
+    "type": "assert_eqw",
+    "named": false
+  },
+  {
     "type": "assertz",
     "named": false
   },
@@ -539,8 +574,16 @@
     "named": false
   },
   {
+    "type": "clk",
+    "named": false
+  },
+  {
     "type": "comment",
     "named": true
+  },
+  {
+    "type": "const",
+    "named": false
   },
   {
     "type": "cswap",
@@ -623,6 +666,10 @@
     "named": true
   },
   {
+    "type": "fri_ext2fold4",
+    "named": false
+  },
+  {
     "type": "gt",
     "named": false
   },
@@ -631,11 +678,27 @@
     "named": false
   },
   {
+    "type": "hash",
+    "named": false
+  },
+  {
+    "type": "hmerge",
+    "named": false
+  },
+  {
+    "type": "hperm",
+    "named": false
+  },
+  {
     "type": "if",
     "named": false
   },
   {
     "type": "inv",
+    "named": false
+  },
+  {
+    "type": "is_odd",
     "named": false
   },
   {
@@ -760,14 +823,6 @@
   },
   {
     "type": "repeat",
-    "named": false
-  },
-  {
-    "type": "rphash",
-    "named": false
-  },
-  {
-    "type": "rpperm",
     "named": false
   },
   {
@@ -1028,6 +1083,10 @@
   },
   {
     "type": "u8",
+    "named": true
+  },
+  {
+    "type": "uppercase",
     "named": true
   },
   {

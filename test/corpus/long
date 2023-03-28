@@ -4,6 +4,8 @@ LONG
 
 use std::mem
 
+const.TEST=1
+
 proc.test end
 proc.with_locals.2 end
 proc.test assert end
@@ -26,6 +28,7 @@ begin
   add.1
   u32checked_add
   u32checked_add.1
+  push.TEST
 
   if.true end
   if.true assert end
@@ -51,6 +54,9 @@ end
 
     (source_file
       (use)
+      (const
+        (uppercase)
+        (felt))
       (proc)
       (proc
         (u16))
@@ -84,6 +90,8 @@ end
         (opcode)
         (opcode
            (u32))
+        (opcode
+          (uppercase))
         (if)
         (if
           (opcode))
@@ -94,9 +102,9 @@ end
         (while
           (opcode))
         (repeat
-          (u16))
+          (u32))
         (repeat
-          (u16)
+          (u32)
           (opcode))
         (call)
         (call)

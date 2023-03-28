@@ -14,6 +14,13 @@
         {
           "type": "REPEAT",
           "content": {
+            "type": "SYMBOL",
+            "name": "const"
+          }
+        },
+        {
+          "type": "REPEAT",
+          "content": {
             "type": "CHOICE",
             "members": [
               {
@@ -38,6 +45,31 @@
               "type": "BLANK"
             }
           ]
+        }
+      ]
+    },
+    "const": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "const"
+        },
+        {
+          "type": "STRING",
+          "value": "."
+        },
+        {
+          "type": "SYMBOL",
+          "name": "uppercase"
+        },
+        {
+          "type": "STRING",
+          "value": "="
+        },
+        {
+          "type": "SYMBOL",
+          "name": "felt"
         }
       ]
     },
@@ -667,11 +699,11 @@
         },
         {
           "type": "STRING",
-          "value": "rphash"
+          "value": "hmerge"
         },
         {
           "type": "STRING",
-          "value": "rpperm"
+          "value": "hperm"
         },
         {
           "type": "STRING",
@@ -688,6 +720,26 @@
         {
           "type": "STRING",
           "value": "caller"
+        },
+        {
+          "type": "STRING",
+          "value": "is_odd"
+        },
+        {
+          "type": "STRING",
+          "value": "assert_eqw"
+        },
+        {
+          "type": "STRING",
+          "value": "clk"
+        },
+        {
+          "type": "STRING",
+          "value": "fri_ext2fold4"
+        },
+        {
+          "type": "STRING",
+          "value": "hash"
         }
       ]
     },
@@ -1765,6 +1817,10 @@
                   {
                     "type": "SYMBOL",
                     "name": "felt_hex"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "uppercase"
                   }
                 ]
               }
@@ -1908,7 +1964,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "u16"
+          "name": "u32"
         }
       ]
     },
@@ -1952,6 +2008,10 @@
     "_proc_name": {
       "type": "PATTERN",
       "value": "[a-zA-Z][a-zA-Z0-9_]{0,99}"
+    },
+    "uppercase": {
+      "type": "PATTERN",
+      "value": "[A-Z][A-Z0-9_]{0,99}"
     },
     "felt_hex": {
       "type": "SEQ",

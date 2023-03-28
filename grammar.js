@@ -3,7 +3,9 @@ module.exports = grammar({
 
   extras: $ => [$.comment, /[\s]/],
   rules: {
-    source_file: $ => seq(repeat($.use), repeat(choice($.proc, $.export)), optional($.main)),
+    source_file: $ => seq(repeat($.use), repeat($.const), repeat(choice($.proc, $.export)), optional($.main)),
+
+    const: $ => seq('const', '.', $.uppercase, '=', $.felt),
 
     comment: $ => token(seq('#', /.*/)),
     use: $ => seq('use', field('module', $._path)),
@@ -88,7 +90,7 @@ module.exports = grammar({
     _swapw: $ => seq('swapw', optional(seq('.', choice('1', '2', '3')))),
     _movupw: $ => seq('movupw', optional(seq('.', choice('2', '3')))),
     _movdnw: $ => seq('movdnw', optional(seq('.', choice('2', '3')))),
-    _push: $ => seq('push', repeat1(seq('.', choice($.felt, $.felt_hex)))), 
+    _push: $ => seq('push', repeat1(seq('.', choice($.felt, $.felt_hex, $.uppercase)))), 
 
     // structural "headers"
     _proc: $ => seq('proc', '.', field('name', $._proc_name), optional(seq('.', $.u16))),
@@ -104,6 +106,7 @@ module.exports = grammar({
     _path: $ => seq($._label, repeat1(seq('::', $._label))),
     _label: $ => /[a-zA-Z][a-zA-Z0-9_]*/,
     _proc_name: $ => /[a-zA-Z][a-zA-Z0-9_]{0,99}/,  // procedure names are limited to 100 chars
+    uppercase: $ => /[A-Z][A-Z0-9_]{0,99}/,  // constant names are limitied to 100 chars
     felt_hex: $ => seq("0x", /[a-fA-F0-9]{1,16}/),
     felt: $ => /[0-9]{1,20}/,
     u32: $ => /[0-9]{1,10}/,
