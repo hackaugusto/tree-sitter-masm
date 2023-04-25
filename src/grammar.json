@@ -442,6 +442,10 @@
         },
         {
           "type": "SYMBOL",
+          "name": "_mem_inst"
+        },
+        {
+          "type": "SYMBOL",
           "name": "_u32_inst"
         },
         {
@@ -925,6 +929,62 @@
         }
       ]
     },
+    "_mem_inst": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "mem_load"
+            },
+            {
+              "type": "STRING",
+              "value": "mem_loadw"
+            },
+            {
+              "type": "STRING",
+              "value": "mem_store"
+            },
+            {
+              "type": "STRING",
+              "value": "mem_storew"
+            }
+          ]
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "STRING",
+                  "value": "."
+                },
+                {
+                  "type": "CHOICE",
+                  "members": [
+                    {
+                      "type": "SYMBOL",
+                      "name": "u32"
+                    },
+                    {
+                      "type": "SYMBOL",
+                      "name": "uppercase"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        }
+      ]
+    },
     "_u32_inst": {
       "type": "SEQ",
       "members": [
@@ -1030,22 +1090,6 @@
             {
               "type": "STRING",
               "value": "u32checked_neq"
-            },
-            {
-              "type": "STRING",
-              "value": "mem_load"
-            },
-            {
-              "type": "STRING",
-              "value": "mem_loadw"
-            },
-            {
-              "type": "STRING",
-              "value": "mem_store"
-            },
-            {
-              "type": "STRING",
-              "value": "mem_storew"
             }
           ]
         },
@@ -1111,8 +1155,17 @@
                   "value": "."
                 },
                 {
-                  "type": "SYMBOL",
-                  "name": "u16"
+                  "type": "CHOICE",
+                  "members": [
+                    {
+                      "type": "SYMBOL",
+                      "name": "u16"
+                    },
+                    {
+                      "type": "SYMBOL",
+                      "name": "uppercase"
+                    }
+                  ]
                 }
               ]
             },

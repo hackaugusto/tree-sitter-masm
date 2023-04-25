@@ -28,7 +28,7 @@ module.exports = grammar({
 
     opcode: $ => choice(
         $._simple_inst, $._adv_inst, $._adv_mem, $._exp, $._assert,
-        $._felt_inst, $._u32_inst, $._u16_inst, $._stack_inst
+        $._felt_inst, $._mem_inst, $._u32_inst, $._u16_inst, $._stack_inst
     ),
 
     // simple instructions
@@ -60,6 +60,12 @@ module.exports = grammar({
     // field element instructions
     _felt_inst: $ => seq(choice('add', 'sub', 'mul', 'eq', 'neq', 'div'), optional(seq('.', $.felt))),
 
+    // memory instructions
+    _mem_inst: $ => seq(
+        choice('mem_load', 'mem_loadw', 'mem_store', 'mem_storew'),
+        optional(seq('.', choice($.u32, $.uppercase)))
+    ),
+
     // u32 instructions
     _u32_inst: $ => seq(choice(
       'u32checked_add', 'u32wrapping_add', 'u32overflowing_add',
@@ -70,13 +76,14 @@ module.exports = grammar({
       'u32checked_shr' , 'u32unchecked_shr', 'u32checked_shl' ,
       'u32unchecked_shl', 'u32checked_rotr', 'u32unchecked_rotr' ,
       'u32checked_rotl', 'u32unchecked_rotl', 'u32checked_eq' ,
-      'u32checked_neq', 'mem_load', 'mem_loadw', 'mem_store', 'mem_storew'
+      'u32checked_neq',
     ), optional(seq('.', $.u32))),
 
     // u16 instructions
-    _u16_inst: $ => seq(choice(
-        'locaddr', 'loc_load', 'loc_loadw', 'loc_store', 'loc_storew',
-    ), optional(seq('.', $.u16))),
+    _u16_inst: $ => seq(
+        choice('locaddr', 'loc_load', 'loc_loadw', 'loc_store', 'loc_storew'),
+        optional(seq('.', choice($.u16, $.uppercase)))
+    ),
 
     // stack instructions
     _stack_inst: $ => choice($._dup, $._swap, $._movup, $._movdn, $._adv_push, $._dupw, $._swapw, $._movupw, $._movdnw, $._push),
