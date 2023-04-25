@@ -8,7 +8,7 @@ module.exports = grammar({
     const: $ => seq('const', '.', $.uppercase, '=', $.felt),
 
     comment: $ => token(seq('#', /.*/)),
-    use: $ => seq('use', field('module', $._path)),
+    use: $ => seq('use', '.', field('module', $._path)),
     export: $ => seq($._export, repeat($._block), $._end),
     proc: $ => seq($._proc, repeat($._block), $._end),
     main: $ => seq($._begin, repeat($._block), $._end),

@@ -97,6 +97,10 @@
           "value": "use"
         },
         {
+          "type": "STRING",
+          "value": "."
+        },
+        {
           "type": "FIELD",
           "name": "module",
           "content": {

@@ -2,7 +2,7 @@
 LONG
 ====
 
-use std::mem
+use.std::mem
 
 const.TEST=1
 
